@@ -14,7 +14,7 @@ public class BookingClass {
     String password;
     
     //method to ensure the code entered contains the correct format
-    public boolean checkbookingcode(){
+    public boolean checkbookingcode(String code){
     if(code.contains("_")&&code.length()<=12){
         return true;
     }
@@ -22,4 +22,13 @@ public class BookingClass {
         return false;
     }
     }
+    public boolean CheckpasswordComplexity(String password){
+        if(password.length()>=8 && password.contains(".[A-Z].")&& password.contains(".[0-9].")&& password.contains("!")||password.contains("@")||password.contains("#")||password.contains("$")||password.contains("%")||password.contains("^")){
+           return true ;
+        }
+        else{
+            return false;
+        }
+    }
+    
 }
