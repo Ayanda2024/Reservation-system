@@ -13,5 +13,13 @@ public class BookingClass {
     String code;
     String password;
     
-    
+    //method to ensure the code entered contains the correct format
+    public boolean checkbookingcode(){
+    if(code.contains("_")&&code.length()<=12){
+        return true;
+    }
+    else{
+        return false;
+    }
+    }
 }
